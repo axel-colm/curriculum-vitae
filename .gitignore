@@ -1,0 +1,20 @@
+# LaTeX build artifacts
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.xmpi
+*.toc
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+
+# Output PDF (keep source, ignore compiled output)
+cv/main.pdf
+
+# Editor
+*.swp
+.DS_Store
