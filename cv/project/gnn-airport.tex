@@ -1,11 +1,12 @@
-\cvevent{Airport Classification by Country}{M2 AI - Université Claude Bernard Lyon 1}{2024}{}
-Developed a global airport classifier using Graph Neural Networks (GNNs).
+\cvevent{Airport Classification by Country}{Université Claude Bernard Lyon 1}{2024}{}
+Conducted a systematic \textbf{ablation study} on a \textbf{GCN} (3-layer, ReLU) for airport-to-country node classification over a global flight-route graph.
 \begin{itemize}
-\item Modeled airports and flight connections as graph structures.
-\item Analyzed the impact of topology and node features on classification accuracy.
+\item Evaluated impact of feature sets (lat/lon, population), \textbf{edge weighting} (inverse geodesic distance), and \textbf{graph topology} (original, fully-connected, country-based) on accuracy.
+\item Key finding: country-based topology reaches \textbf{100\% accuracy} vs. fully-connected degrading performance — graph structure dominates feature choice. Final model: \textbf{89\% test accuracy}.
 \end{itemize}
 {\LaTeXraggedright
-\cvsmalltag{GNN}
-\cvsmalltag{Graph Theory}
-\cvsmalltag{Classification}
+\cvsmalltag{GNN / GCN}
+\cvsmalltag{Ablation Study}
+\cvsmalltag{Graph Topology}
+\cvsmalltag{PyTorch Geometric}
 \par}

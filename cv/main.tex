@@ -13,6 +13,7 @@
 
 \definecolor{SlateGrey}{HTML}{2E2E2E}
 \definecolor{LightGrey}{HTML}{666666}
+\definecolor{VeryLightGrey}{HTML}{AAAAAA}
 \definecolor{DarkPastelRed}{HTML}{450808}
 \definecolor{PastelRed}{HTML}{8F0D0D}
 \definecolor{GoldenEarth}{HTML}{E7D192}
@@ -39,17 +40,15 @@
 
 \begin{document}
 \name{Axel Colmant}
-\tagline{Research Engineer - Computer Vision \& Embedded AI}
+\tagline{Research Engineer -- Computer Vision \& Deep Learning}
 \photoL{2.8cm}{images/profile.jpg}
 
 \personalinfo{%
   \email{axel.colmant@gmail.com}
-  % \phone{**-**-**-**-**}
   \phone{07-82-82-79-85}
-  \mailaddress{5 allée des terres nobles, 69480 MORANCÉ}
-  \location{Lyon, FRANCE}
+  \location{FRANCE}
   % \homepage{portfolio.axelcolmant.com}
-  \linkedin{axel-colmant-9853b4201}
+  \linkedin{axel-colmant}
   \github{axel-colm}
 }
 
@@ -58,13 +57,17 @@
 \begin{paracol}{2}
 \cvsection{Experience}
 
+\input{experience/axel-colmant-ei.tex}
+
+\cvdivider
+
 \input{experience/verreo-2026.tex}
 
-\divider
+\cvdivider
 
 \input{experience/verreo-intership-2025.tex}
 
-\divider
+\cvdivider
 
 % \cvevent{Apprentice Software Engineer}{Le SAS Escape Game}{Oct. 2021 -- Aug. 2024}{Béziers, FRANCE}
 % \begin{itemize}
@@ -87,7 +90,7 @@
 
 \input{experience/sas-eg.tex}
 
-\divider
+\cvdivider
 
 \input{experience/reel.tex}
 \switchcolumn
@@ -142,7 +145,24 @@
 
 
 
-\input{education.tex}
+\cvsection{Education}
+
+\input{education/master2-ai-lyon1.tex}
+
+\divider
+
+\input{education/master-robotics-cnam.tex}
+
+\divider
+
+\input{education/bachelor-robotics-cnam.tex}
+
+\divider
+
+\input{education/dut-geii.tex}
+
+\end{paracol}
+
 
 % =============================================================== %
 %                             PAGE 2                              %                
@@ -155,12 +175,15 @@
 
 \input{project/gpt-from-scratch.tex}
 \divider
-\input{project/robot-planet-explo.tex}
+\input{project/motion-transfer.tex}
+\divider
+\input{project/gnn-airport.tex}
 \divider
 \input{project/lunar-lander.tex}
 \divider
-
-\input{project/project_ros_robot.tex}
+\input{project/voice-gen.tex}
+\divider
+\input{project/hand-gesture.tex}
 
 \end{paracol}
 

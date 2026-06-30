@@ -130,7 +130,7 @@
 \RequirePackage{changepage}
 
 \setlength{\parindent}{0pt}
-\newcommand{\divider}{\textcolor{body!30}{\hdashrule{\linewidth}{0.6pt}{0.5ex}}\medskip}
+\newcommand{\divider}{\textcolor{body!30}{\hdashrule{\linewidth}{0.6pt}{0.5ex}}\smallskip}
 
 \newenvironment{fullwidth}{%
   \begin{adjustwidth}{}{\dimexpr-\marginparwidth-\marginparsep\relax}}
@@ -317,21 +317,17 @@
 
 % v1.1.4: fixes inconsistent font size
 % v1.7: adds accsupp ActualText for location and date markers
-\newcommand{\cvevent}[4]{%
-  {\large\color{emphasis}#1}
-  \normalsize
-  \ifstrequal{#2}{}{}{
-  \textbf{\color{accent}{@ #2}}\par}
-  \ifstrequal{#3}{}{}{%
-    {\small\makebox[0.5\linewidth][l]%
-      {\BeginAccSupp{method=pdfstringdef,ActualText={\datename:}}\cvDateMarker\EndAccSupp{}%
-      ~#3}%
-    }}%
-  \ifstrequal{#4}{}{}{%
-    {\small\makebox[0.5\linewidth][l]%
-      {\BeginAccSupp{method=pdfstringdef,ActualText={\locationname:}}\cvLocationMarker\EndAccSupp{}%
-        ~#4}%
-    }}\par
+% Custom: added optional 5th arg for contract type; inline layout with dot separators
+\newcommand{\cvdivider}{\vspace{0.3em}\textcolor{body!30}{\rule{\linewidth}{0.4pt}}\vspace{0.3em}}
+
+\NewDocumentCommand{\cvevent}{m m m m O{}}{%
+  {\large\color{emphasis}#1\normalsize}
+  \ifstrequal{#2}{}{}{\textbf{\color{accent}{ @ #2}}\par}
+  \parbox{\linewidth}{\small\color{VeryLightGrey}%
+    \ifstrequal{#5}{}{}{\mbox{#5\enspace\enspace}\hspace{0pt}}%
+    \ifstrequal{#3}{}{}{\mbox{\cvDateMarker~#3\enspace\enspace}\hspace{0pt}}%
+    \ifstrequal{#4}{}{}{\mbox{\cvLocationMarker~#4}}%
+  }\par
   \normalsize
 }
 
