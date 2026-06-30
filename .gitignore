@@ -12,8 +12,8 @@
 *.bcf
 *.run.xml
 
-# Output PDF (keep source, ignore compiled output)
-cv/main.pdf
+# PDFs (compiled output + embedded assets)
+*.pdf
 
 # Editor
 *.swp

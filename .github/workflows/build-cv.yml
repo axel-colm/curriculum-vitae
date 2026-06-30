@@ -1,0 +1,36 @@
+name: Build CV
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Compile LaTeX
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
+          working_directory: cv
+          latexmk_use_xelatex: true
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cv-${{ github.sha }}
+          path: cv/main.pdf
+          retention-days: 90
+
+      - name: Create Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: cv/main.pdf
+          name: CV ${{ github.ref_name }}
+          body: |
+            CV compilé automatiquement depuis le tag `${{ github.ref_name }}`.
