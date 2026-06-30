@@ -17,7 +17,7 @@ jobs:
         with:
           root_file: main.tex
           working_directory: cv
-          latexmk_use_xelatex: true
+          latexmk_use_lualatex: true
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
