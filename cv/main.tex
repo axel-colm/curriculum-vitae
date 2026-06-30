@@ -1,0 +1,171 @@
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+\geometry{left=1cm,right=1cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+\usepackage{paracol}
+\iftutex 
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+
+\definecolor{LightGreen}{HTML}{569453}
+\definecolor{LightPastelGreen}{HTML}{8FBF8D}
+
+\colorlet{name}{black}
+\colorlet{tagline}{LightPastelGreen}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{LightGrey}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{LightPastelGreen}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+\renewcommand{\cvItemMarker}{{\small\textbullet}}
+\renewcommand{\cvRatingMarker}{\faCircle}
+
+\begin{document}
+\name{Axel Colmant}
+\tagline{Research Engineer - Computer Vision \& Embedded AI}
+\photoL{2.8cm}{images/profile.jpg}
+
+\personalinfo{%
+  \email{axel.colmant@gmail.com}
+  % \phone{**-**-**-**-**}
+  \phone{07-82-82-79-85}
+  \mailaddress{5 allée des terres nobles, 69480 MORANCÉ}
+  \location{Lyon, FRANCE}
+  % \homepage{portfolio.axelcolmant.com}
+  \linkedin{axel-colmant-9853b4201}
+  \github{axel-colm}
+}
+
+\makecvheader
+\columnratio{0.58}
+\begin{paracol}{2}
+\cvsection{Experience}
+
+\input{experience/verreo-2026.tex}
+
+\divider
+
+\input{experience/verreo-intership-2025.tex}
+
+\divider
+
+% \cvevent{Apprentice Software Engineer}{Le SAS Escape Game}{Oct. 2021 -- Aug. 2024}{Béziers, FRANCE}
+% \begin{itemize}
+% \item Designed embedded IoT systems and interactive puzzles with sensor networks and microcontrollers.
+% \item Developed real-time control and monitoring software for autonomous game management.
+% \item Built desktop using Qt for device orchestration.
+% \item Integrated hardware communication protocols (serial, GPIO, MQTT) for low-latency interaction between software and physical components.
+% \end{itemize}
+
+% {\LaTeXraggedright
+% \cvsmalltag{Python}
+% \cvsmalltag{C++}
+% \cvsmalltag{Qt}
+% \cvsmalltag{Arduino}
+% \cvsmalltag{IoT}
+% \cvsmalltag{Embedded Systems}
+% \cvsmalltag{Real-Time Control}
+% \cvsmalltag{Software Engineering}
+% \par}
+
+\input{experience/sas-eg.tex}
+
+\divider
+
+\input{experience/reel.tex}
+\switchcolumn
+
+% \cvsection{My Life Philosophy}
+
+% \begin{quote}
+% ``What I know is that I know nothing.'' -- Socrates
+% \end{quote}
+
+
+% \cvsection{Skills}
+
+% \cvskill{Python}{5}
+% \cvskill{C/C++}{3.5}
+
+% \divider
+
+% \cvskill{PyTorch}{4}
+% \cvskill{TensorFlow}{2.5}
+% \cvskill{OpenCV}{3}
+
+% \divider
+
+% \cvskill{Deep Learning}{4.5}
+% \cvskill{Computer Vision}{4}
+% \cvskill{Embedded AI / IoT}{4}
+% \cvskill{Machine Learning}{4}
+% \cvskill{MLOps / GPU Optimization}{3.5}
+% \cvskill{ROS / Robotics Simulation}{3}
+% \cvsection{Languages}
+
+% \cvskill{French}{5}
+% \cvskill{English}{3}
+% \cvskill{Spanish}{2}
+
+
+% \cvsection{Strengths}
+
+% {\LaTeXraggedright
+% \cvtag{Perseverance}
+% \cvtag{Determination}
+% \cvtag{Intellectual Curiosity}
+% \cvtag{Creativity}
+% \cvtag{Team Spirit}
+% \cvtag{Autonomy}
+% \par}
+\input{skills.tex}
+
+% \cvskill{Reinforcement Learning}{3}
+
+
+
+
+\input{education.tex}
+
+% =============================================================== %
+%                             PAGE 2                              %                
+% =============================================================== %
+\newpage
+\cvsection{Projects}
+\columnratio{0.5}
+
+\begin{paracol}{1}
+
+\input{project/gpt-from-scratch.tex}
+\divider
+\input{project/robot-planet-explo.tex}
+\divider
+\input{project/lunar-lander.tex}
+\divider
+
+\input{project/project_ros_robot.tex}
+
+\end{paracol}
+
+\end{document}
+
+
+
+
